@@ -1,0 +1,279 @@
+package com.oracle.five.cloud_disk.controller;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpSession;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.apache.commons.io.FileUtils;
+import org.apache.taglibs.standard.lang.jstl.test.beans.PublicInterface2;
+
+import com.oracle.five.cloud_disk.beans.CloudFile;
+import com.oracle.five.cloud_disk.mapper.CloudFileMapper;
+
+@Controller
+@RequestMapping(value = "/file")
+public class FileController {
+	/** 自动映射改接口的对象 */
+	@Autowired
+	private CloudFileMapper filedao;
+	@RequestMapping("/selectall")
+	/** model对象向页面传输数据 */
+	public String selectAll(Map<String, Object> model) {
+		List<CloudFile> files = filedao.selectAll();
+		model.put("file", files);
+		System.out.println("最外层的父类文件为" + files);
+		return "mynetdisk";
+	}
+
+	/** 查看相应的父路径下的所有子文件 */
+	@RequestMapping("/selectfile")
+	public String selectFile(@RequestParam(value = "fileid") int fileid, Map<String, Object> model,HttpSession session) {
+		List<CloudFile> files = filedao.selectFile(fileid);
+		if(files.size()==0)
+		{
+			CloudFile sonfile=filedao.selectsonFile(fileid);
+			System.out.println("查出来的这个子文件的信息："+sonfile);
+			String path=session.getServletContext().getRealPath("");
+			File file = new File(path+"\\"+sonfile.getRealPath()+"\\"+sonfile.getFileName());
+			System.out.println(path+"\\"+sonfile.getRealPath()+"\\"+sonfile.getFileName());
+			model.put("sonfile",sonfile);
+			return "yulan";
+		}
+		else
+		{
+			model.put("file", files);
+			return "mynetdisk";
+		}
+	}
+	
+	/** 加载相应的所有对应类型文件 */
+	@RequestMapping("/selectFileByType")
+	public String selectType(@RequestParam(value="type") int type,Map<String,Object> model){
+		List<CloudFile> files=filedao.selectFileByType(type);
+		model.put("file", files);
+		return "mynetdisk";
+	}
+
+	/** 上传文件的方法 */
+	String[] doc = { "doc", "docx", "txt", "pdf", "ppt", "pptx", "xls", "wps", "html" ,"php"};
+	String[] img = { "bmp", "gif", "jpg", "png", "tif", "pic" };
+	String[] audio = { "mp3", "wav", "aif", "au" };
+	String[] vedio = { "avi", "mpg", "mp4", "swf" };
+	String[] bt = { "torrent" };
+	
+	@RequestMapping("/uploadfile")
+	public String uploadfile(MultipartFile upload, HttpSession session,String urlHidden) throws IllegalStateException, IOException {
+		String filename = upload.getOriginalFilename();
+		String type = filename.substring(filename.lastIndexOf(".") + 1);
+		String fatherId="0";
+		String leftPath = null;
+		String realPath=null;
+		int typeNum=0;
+		if(urlHidden.indexOf("=")!=-1){
+			fatherId=urlHidden.substring(urlHidden.lastIndexOf("=")+1);
+		}
+		LOOP:while (true) {
+			for (int i = 0; i < doc.length; i++) {
+				if (type.equalsIgnoreCase(doc[i])){
+					realPath="file/doc";
+					typeNum=5;
+					break LOOP;
+				}
+			}
+			for (int i = 0; i < img.length; i++) {
+				if (type.equalsIgnoreCase(img[i])){
+					realPath="file/img";
+					typeNum=3;
+					break LOOP;					
+				}
+			}
+			for (int i = 0; i < audio.length; i++) {
+				if (type.equalsIgnoreCase(audio[i])){
+					realPath="file/audio";
+					typeNum=4;
+					break LOOP;					
+				}
+			}
+			for (int i = 0; i < vedio.length; i++) {
+				if (type.equalsIgnoreCase(vedio[i])){
+					realPath="file/vedio";
+					typeNum=2;
+					break LOOP;					
+				}
+			}
+			for (int i = 0; i < bt.length; i++) {
+				if (type.equalsIgnoreCase(bt[i])){
+					realPath="file/bt";
+					typeNum=6;
+				}else{
+					realPath="file/other";
+					typeNum=7;
+				}
+				break LOOP;	
+			}
+		}
+		leftPath = session.getServletContext().getRealPath(realPath);
+		if(!new File(leftPath).exists()){
+			new File(leftPath).mkdirs();
+		}
+		File file = new File(leftPath, filename);
+		upload.transferTo(file);
+		CloudFile fcf=new CloudFile();
+		fcf.setFileId(Integer.parseInt(fatherId));
+		CloudFile cf=new CloudFile(null, fcf, filename, realPath, false, 0, 0, 0, typeNum, null,0,null);
+		filedao.insert(cf);
+		
+		return "redirect:"+urlHidden;
+	}
+
+
+	/**完整的父类以及子类的下载文件的方法*/
+	@RequestMapping("/download")
+	public ResponseEntity<byte[]> download(@RequestParam(value = "fileid") int fileid, HttpSession session) throws IOException {
+		List<CloudFile> files = filedao.selectFile(fileid);
+		String path=session.getServletContext().getRealPath("");
+		if(files.size()==0)
+		{
+			CloudFile sonfiles=filedao.selectsonFile(fileid);
+			File file = new File(path+"\\"+sonfiles.getRealPath()+"\\"+sonfiles.getFileName());
+			System.out.println(path+"\\"+sonfiles.getRealPath()+"\\"+sonfiles.getFileName());
+			HttpHeaders headers = new HttpHeaders();
+			String fileName = new String(sonfiles.getFileName().getBytes("UTF-8"), "iso-8859-1");
+			headers.setContentDispositionFormData("attachment", fileName);
+			headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
+			return new ResponseEntity<byte[]>(FileUtils.readFileToByteArray(file), headers, HttpStatus.CREATED);
+		}
+		else
+		{
+			String fatherfile=filedao.selectfatherFile(fileid);
+			File file = new File(path+"\\"+"file"+"\\"+fatherfile);
+			HttpHeaders headers = new HttpHeaders();
+			String fileName = new String(fatherfile.getBytes("UTF-8"), "iso-8859-1");
+			headers.setContentDispositionFormData("attachment", fileName);
+			headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
+			return new ResponseEntity<byte[]>(FileUtils.readFileToByteArray(file), headers, HttpStatus.CREATED);
+		}
+	}
+
+	
+	/** 重命名文件的方法 */
+	@RequestMapping("/updatefile")
+	public String updatefile(@RequestParam(value = "fileid") int fileid,
+			@RequestParam(value = "fileName") String fileName) throws Exception {
+		System.out.println("要修改的文件id：" + fileid);
+		fileName = new String(fileName.getBytes("ISO8859-1"), "UTF-8");
+		System.out.println("更改之后的名字" + fileName);
+		@SuppressWarnings("unused")
+		boolean result = filedao.updatefile(fileid, fileName);
+		return "mynetdisk";
+	}
+	
+	/** 删除文件/父文件的方法 */
+	@RequestMapping("deletefile")
+	public String deleteByPrimaryKey(@RequestParam(value = "fileid") int fileid) {
+		System.out.println("即将删除编号为:" + fileid + "的文件");
+		List<CloudFile> files = filedao.selectFile(fileid);
+		System.out.println("shanchu:"+files);
+		if (files.size()==0) {
+			int result = filedao.deleteByPrimaryKey(fileid);
+			if (result > 0)
+				System.out.println("子文件删除成功！");
+			else
+				System.out.println("子文件删除失败！");
+			return "mynetdisk";
+		} else {
+			@SuppressWarnings("unused")
+			int result = filedao.deleteByPrimaryKey(fileid);
+			int result1 = filedao.deleteByFatherId(fileid);
+			if (result1 > 0)
+				System.out.println("父文件删除成功！");
+			else
+				System.out.println("父文件删除失败！");
+			return "mynetdisk";
+		}
+	}
+
+	
+	/**在选择复制某文件时，将该被复制的文件提前根据id查出来*/
+	@RequestMapping("choosecopyto")
+	public String choosecopyto(@RequestParam(value="fileid") int fileid,HttpSession session) {
+		session.setAttribute("copefileid", fileid);
+		System.out.println("这是被复制的文件id："+session.getAttribute("copefileid"));
+		return "blankblock";
+	}
+	/**在选择复制到某文件时，加载所有父级文件的名字和相应的id*/
+	@RequestMapping("fatherfilename")
+	public String fatherfilename(Map<String, Object> model) {
+		List<String> files = filedao.selectFathername();
+		model.put("files", files);
+		System.out.println("父类文件为" + files);
+		return "blankblock";
+	}
+	/**将文件复制到相应的文件夹下面*/
+	@RequestMapping("surecopyto")
+	public String surecopyto(@RequestParam(value="fileid") int fileid,HttpSession session) {
+		System.out.println("将要复制到fatherfileid："+fileid);
+		int copyfileid=(int)session.getAttribute("copefileid");
+		System.out.println("被复制的文件id"+copyfileid);
+		//查询的时fatherfileid为copyfileid下的子文件
+		List<CloudFile> copyfiles = filedao.selectFile(copyfileid);
+		System.out.println(copyfiles);
+		if(copyfiles.size()==0)
+		{
+			CloudFile copy=filedao.selectsonFile(copyfileid);
+			System.out.println("被复制的文件file_id"+copy);
+			boolean copyto=filedao.surecopyto(copy,fileid);
+			return "blankblock";
+		}
+		else
+		{
+			//查询被复制的文件夹的信息
+			CloudFile copy=filedao.selectsonFile(copyfileid);
+			System.out.println("被复制的文件夹"+copy);
+			List<CloudFile> copysonfile = filedao.selectFile(copy.getFileId());
+			System.out.println("被复制的文件夹下面的子文件"+copysonfile);
+			boolean copyto=filedao.surecopyto(copy, fileid);
+			
+			return "blankblock";
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	@RequestMapping("selectSonname")
+	public String selectSonname(@RequestParam(value="fileid") int fileid,Map<String,Object> model) {
+		List<CloudFile> copyfiles=filedao.selectSonname(fileid);
+		model.put("copyfiles",copyfiles );
+		System.out.println("子类文件为"+copyfiles);
+		return "blankblock";
+	}
+	
+	
+	/***/
+	@RequestMapping(value="recycle")
+	public String recycle(Map<String, Object> model){
+		List<CloudFile> files=filedao.recycle();
+		model.put("files", files);
+		System.out.println(files);
+		return "recycle";
+		
+	}
+
+}

@@ -1,0 +1,7 @@
+.icon-huishouzhan{
+	font-size:18px
+}
+.icon-baiduyunpan{
+	font-size: 33px;
+    vertical-align: -3px;
+}

@@ -1,0 +1,339 @@
+/* 空间容量的css */
+.spacecss{
+	border: 1px;
+    position: absolute;
+    bottom: 15%;
+}
+.spacefont{
+	margin-left:5%;
+	color: #e5e5e5;
+	width: 200px;
+	height: 30px;
+}
+
+.spacesize{
+	margin-left:5%;
+	margin-top:100%;
+	width: 200px;
+	height: 10px;	
+	border-radius:20px;
+	background: #e5e5e5;
+	position: relative;
+}
+
+.spacesize .spacesizebar{
+	width: 200px;
+	height: 10px;
+	border-radius:18px;
+	background: #F36A5A;
+	position: absolute;
+}
+/* 分享页面的css */
+#changetohand {
+	cursor: pointer;
+}
+
+.myheader{
+	min-height:16.43px;
+	padding:15px;
+	background:#282828;
+	border-bottom:1px solid #e5e5e5;
+	}
+	
+.sharepagehead{
+	width: 130px;
+	height: 50px;
+	color:#808080;
+}
+
+.myheader .close{
+	color:#808080;
+	margin-top:-2px;
+	}
+	
+.sharepagelinkdiv{
+	margin-top: 50px;
+	margin-bottom: 100px;
+	width: 580px;
+	height: 200px;
+}
+
+.sharepagelinkdiv:BEFORE{
+	content: '';  
+    width: 0;  
+    height: 0;  
+    border-left:15px solid transparent;
+    border-top:15px solid transparent;
+    border-right:15px solid transparent;
+    border-bottom:15px solid #ffffff;
+    position: absolute;  
+    left: 6%;  
+    top: -10px;  
+    margin-top: -20px; 
+}
+
+.sharepagefreinddiv{
+	margin-top: 20px;
+	margin-bottom: 100px;
+	width: 560px;
+	height: 200px;
+}
+
+.sharepagefreinddiv:BEFORE{
+	content: '';  
+    width: 0;  
+    height: 0;  
+    border-left:15px solid transparent;
+    border-top:15px solid transparent;
+    border-right:15px solid transparent;
+    border-bottom:15px solid #ffffff;
+    position: absolute;  
+    left: 27%;  
+    top: -10px;  
+    margin-top: -20px; 
+}
+.sharepagefreinddiv .freindlist{
+	border:1px solid #000;
+	border-color: #808080;
+	width: 250px;
+	height: 270px;
+	display: block;
+	float: left;
+}
+
+.sharepagefreinddiv .freindlist .selectdfriendiv{
+	margin-top: 5px;
+	margin-left: 4px;
+}
+
+.sharepagefreinddiv .freindlist .selectdfriendiv .recentlyshare{
+	width: 240px;
+	color:#808080;
+	cursor: pointer;
+}
+
+.sharepagefreinddiv .freindlist .selectdfriendiv .recentlyshare .recenttitle1{
+	width:10px;
+	height:30px;
+	color:#808080;
+	border: none;
+}
+.sharepagefreinddiv .freindlist .selectdfriendiv .recentlyshare .recenttitle2{
+	width:230px;
+	height:30px;
+	color:#808080;
+	border: none;
+}
+.sharepagefreinddiv .freindlist .selectdfriendiv .recentlyshare .fobj1{
+	width:150px;
+	height:40px;
+	color:#808080;
+	border: none;
+}
+.sharepagefreinddiv .freindlist .selectdfriendiv .recentlyshare .fobj1 .namefont{
+	margin-left:5px;
+	font-family:serif;
+}
+.sharepagefreinddiv .freindlist .selectdfriendiv .recentlyshare .fobj2{
+	width:50px;
+	height:40px;
+	color:#808080;
+	border: none;
+	/*border: 1px solid #000;
+	border-color: red;*/
+}
+
+.sharepagefreinddiv .freindlist .selectdfriendiv .recentlyshare .fobj2 .selectcontent{
+	border:1px solid #808080;
+	background-color:#ffffff;/*#438600*/
+	border-radius:20px;
+	width: 20px;
+	height: 20px;
+	margin-left: 10px;
+}
+
+#friendimg{
+	width: 30px;
+	height: 30px;
+}
+
+
+#selectrecenton1{
+	display:inline-block;
+    margin-left:5px;
+    margin-top:12px;
+    width: 7px;
+    height:2px; 
+    background: #ffffff;
+    -webkit-transform: rotate(-135deg) translateY(-50%) translateX(50%);
+}
+#selectrecenton2{
+    content:'';
+    display:block;
+    margin-left:1px;
+    margin-top:0px;
+    width: 13px;
+    height:2px; 
+    background: #ffffff;
+    -webkit-transform: rotate(-55deg) translateY(-50%) translateX(50%);
+}
+
+.sharepagefreinddiv .tofreind{
+	border:1px solid #000;
+	border-color: #808080;
+	width: 250px;
+	height: 270px;
+	display: block;
+	float: right;
+}
+
+.sharepagefreinddiv .tofreind .countinfo{
+	height:30px;
+	margin-top:10px;
+	border:1px solid #000;
+	border-color: #ffffff;
+	border-bottom-color: #808080;
+}
+.sharepagefreinddiv .tofreind .countinfo .countspan{
+	margin-left:5px;
+	color: #808080;
+}
+
+.sharepagefreinddiv .tofreind .friendobjdiv{
+	margin-top:5px;
+	margin-left:4px;
+	color: #808080;
+}
+.sharepagefreinddiv .tofreind .friendobjdiv .selectedfriendinfo{
+	width:170px;
+	height:40px;
+	color:#808080;
+	border: none;
+}
+
+.sharepagefreinddiv .tofreind .friendobjdiv .cancelfriend{
+	width:40px;
+	height:40px;
+	color:#808080;
+	border: none;
+}
+
+.sharepagefreinddiv .tofreind .friendobjdiv .cancelfriend .cancelselect{
+	background-color:#ff4444;
+	border-radius:20px;
+	width: 20px;
+	height: 20px;
+	margin-left: 20px;
+	margin-top: 0px;
+	cursor: pointer;
+	position: relative;
+}
+
+#cancelcenton{
+	border: 1px solid #000;
+	margin-left:5px;
+	margin-top:9px;
+	width: 10px;
+	height: 1px;
+	position: absolute;
+} 
+
+.sharepagefreinddiv .tofreind .friendobjdiv .selectedfriendinfo .namefont{
+	margin-left:5px;
+	font-family:serif;
+}
+
+.sharepagesinadiv{
+	margin-top: 50px;
+	margin-bottom: 100px;
+	width: 560px;
+	height: 200px;
+}
+
+.sharepagesinadiv:BEFORE{
+	content: '';  
+    width: 0;  
+    height: 0;  
+    border-left:15px solid transparent;
+    border-top:15px solid transparent;
+    border-right:15px solid transparent;
+    border-bottom:15px solid #ffffff;
+    position: absolute;  
+    left: 49%;  
+    top: -10px;  
+    margin-top: -20px; 
+}
+
+.modal-body .fontcolor{
+	color:#808080;
+}
+.fontcolor{
+	color:#808080;
+}
+
+.sharepagelinkdiv .borderstyleright{
+	color:#808080;
+	width: 300px;
+	height: 33px;
+	border-right: none;
+	border-bottom-color: #959595;
+}
+.modal-body  .borderstyleleft{
+	color:#808080;
+	width: 100px;
+	height: 33px;
+	border-left: none;
+	border-right-color: #959595;
+	border-bottom-color: #959595;
+}
+
+.sharepagelinkdiv .borderpassword{
+	width:40px;
+	color:#808080;
+}
+
+.successshow{
+	display: none;
+	width: 500px;
+	border: none;
+}
+
+.modal-body .myfooter{
+	padding:15px;
+	text-align:right;
+	border-top:0px solid #e5e5e5;
+	}
+.modal-body .sharebtn{
+	display: inline-block;
+	border:none;
+	width:100px;
+	height:32px;
+	background: #282828;
+	color:#808080;
+	font-size:large;
+	margin-right: 20px;
+	
+}
+
+.modal-body .sharebtnpass{
+	display: inline-block;
+	border:none;
+	width:140px;
+	height:32px;
+	background: #282828;
+	color:#808080;
+	font-size:large;
+	margin-right: 20px;
+	
+}
+
+/* .modal-body .myfooter .btn+.btn{
+	margin-bottom:0;
+	margin-left:5px;
+	}
+.modal-body .myfooter .btn-group .btn+.btn{
+	margin-left:-1px;
+	}
+.modal-body .myfooter .btn-block+.btn-block{
+	margin-left:0;
+	} */

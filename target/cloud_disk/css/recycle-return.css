@@ -1,0 +1,62 @@
+.alert-dialog .header {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    zoom: 1;
+    background-color: #f2f6fd;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom: 1px solid #c4dbfe;
+}
+
+.icon-close {
+    font-family: yunfont!important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+.content {
+    padding: 22px;
+    background: #fff;
+    line-height: 24px;
+}
+
+.footer {
+    background: #fff;
+    height: 60px;
+    width: 100%;
+    position: relative;
+    padding-right: 0;
+}
+
+.sbtn{
+    background: #3b8cff!important;
+    border: 1px solid #3b8cff!important;
+}
+b {
+    font-weight: bold;
+}
+
+.dbtn {
+    font-size: 14px;
+    padding-left: 30px;
+    height: 32px;
+    line-height: 32px;
+    margin: 0 4px;
+}

@@ -1,0 +1,470 @@
+[DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\mapper\ChatRecordMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\mapper\CloudFileMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\mapper\DialogueMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\mapper\RelationshipMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\mapper\ShareMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\mapper\UserMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'chatRecordMapper' and 'com.oracle.five.cloud_disk.mapper.ChatRecordMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'chatRecordMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'cloudFileMapper' and 'com.oracle.five.cloud_disk.mapper.CloudFileMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'cloudFileMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'dialogueMapper' and 'com.oracle.five.cloud_disk.mapper.DialogueMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'dialogueMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'relationshipMapper' and 'com.oracle.five.cloud_disk.mapper.RelationshipMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'relationshipMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'shareMapper' and 'com.oracle.five.cloud_disk.mapper.ShareMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'shareMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'userMapper' and 'com.oracle.five.cloud_disk.mapper.UserMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'userMapper'.
+  [INFO][com.mchange.v2.log.MLog]MLog clients using slf4j logging.
+  [DEBUG][com.mchange.v2.log.MLog]Reading VM config for path list /com/mchange/v2/log/default-mchange-log.properties, /mchange-commons.properties, /c3p0.properties, hocon:/reference,/application,/c3p0,/, /mchange-log.properties, /
+  [DEBUG][com.mchange.v2.log.MLog]The configuration file for resource identifier '/mchange-commons.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.log.MLog]The configuration file for resource identifier '/c3p0.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.log.MLog]The configuration file for resource identifier 'hocon:/reference,/application,/c3p0,/' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.log.MLog]The configuration file for resource identifier '/mchange-log.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/mchange-commons.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/mchange-log.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier 'hocon:/reference,/application,/c3p0,/' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/c3p0.properties' could not be found. Skipping.
+  [INFO][com.mchange.v2.c3p0.C3P0Registry]Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+  [DEBUG][com.mchange.v2.c3p0.management.DynamicPooledDataSourceManagerMBean]MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1bqsyzc9p1proa9bv40wnz|b3b079,name=1bqsyzc9p1proa9bv40wnz|b3b079 registered.
+  [DEBUG][com.mchange.v2.c3p0.management.DynamicPooledDataSourceManagerMBean]MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1bqsyzc9p1proa9bv40wnz|b3b079,name=1bqsyzc9p1proa9bv40wnz|b3b079 unregistered, in order to be reregistered after update.
+  [DEBUG][com.mchange.v2.c3p0.management.DynamicPooledDataSourceManagerMBean]MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1bqsyzc9p1proa9bv40wnz|b3b079,name=1bqsyzc9p1proa9bv40wnz|b3b079 registered.
+  [DEBUG][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed configuration file: 'class path resource [mybatis.xml]'
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed mapper file: 'file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\wrapper\ChatRecordMapper.xml]'
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed mapper file: 'file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\wrapper\CloudFileMapper.xml]'
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed mapper file: 'file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\wrapper\DialogueMapper.xml]'
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed mapper file: 'file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\wrapper\RelationshipMapper.xml]'
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed mapper file: 'file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\wrapper\ShareMapper.xml]'
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed mapper file: 'file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\wrapper\UserMapper.xml]'
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\mapper\ChatRecordMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\mapper\CloudFileMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\mapper\DialogueMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\mapper\RelationshipMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\mapper\ShareMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\mapper\UserMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'chatRecordMapper' and 'com.oracle.five.cloud_disk.mapper.ChatRecordMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'chatRecordMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'cloudFileMapper' and 'com.oracle.five.cloud_disk.mapper.CloudFileMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'cloudFileMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'dialogueMapper' and 'com.oracle.five.cloud_disk.mapper.DialogueMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'dialogueMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'relationshipMapper' and 'com.oracle.five.cloud_disk.mapper.RelationshipMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'relationshipMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'shareMapper' and 'com.oracle.five.cloud_disk.mapper.ShareMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'shareMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'userMapper' and 'com.oracle.five.cloud_disk.mapper.UserMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'userMapper'.
+  [INFO][com.mchange.v2.log.MLog]MLog clients using slf4j logging.
+  [DEBUG][com.mchange.v2.log.MLog]Reading VM config for path list /com/mchange/v2/log/default-mchange-log.properties, /mchange-commons.properties, /c3p0.properties, hocon:/reference,/application,/c3p0,/, /mchange-log.properties, /
+  [DEBUG][com.mchange.v2.log.MLog]The configuration file for resource identifier '/mchange-commons.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/mchange-commons.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/mchange-log.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier 'hocon:/reference,/application,/c3p0,/' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/c3p0.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.log.MLog]The configuration file for resource identifier '/c3p0.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.log.MLog]The configuration file for resource identifier 'hocon:/reference,/application,/c3p0,/' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.log.MLog]The configuration file for resource identifier '/mchange-log.properties' could not be found. Skipping.
+  [INFO][com.mchange.v2.c3p0.C3P0Registry]Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+  [DEBUG][com.mchange.v2.c3p0.management.DynamicPooledDataSourceManagerMBean]MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1bqsyzc9p1prv7b7rbzuvk|3fd068,name=1bqsyzc9p1prv7b7rbzuvk|3fd068 registered.
+  [DEBUG][com.mchange.v2.c3p0.management.DynamicPooledDataSourceManagerMBean]MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1bqsyzc9p1prv7b7rbzuvk|3fd068,name=1bqsyzc9p1prv7b7rbzuvk|3fd068 unregistered, in order to be reregistered after update.
+  [DEBUG][com.mchange.v2.c3p0.management.DynamicPooledDataSourceManagerMBean]MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1bqsyzc9p1prv7b7rbzuvk|3fd068,name=1bqsyzc9p1prv7b7rbzuvk|3fd068 registered.
+  [DEBUG][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed configuration file: 'class path resource [mybatis.xml]'
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed mapper file: 'file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\wrapper\ChatRecordMapper.xml]'
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed mapper file: 'file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\wrapper\CloudFileMapper.xml]'
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed mapper file: 'file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\wrapper\DialogueMapper.xml]'
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed mapper file: 'file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\wrapper\RelationshipMapper.xml]'
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed mapper file: 'file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\wrapper\ShareMapper.xml]'
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed mapper file: 'file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\wrapper\UserMapper.xml]'
+  [INFO][com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource]Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1bqsyzc9p1prv7b7rbzuvk|3fd068, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1bqsyzc9p1prv7b7rbzuvk|3fd068, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://120.24.244.103:3306/CLOUD_DISK, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 50, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/mchange-commons.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/mchange-log.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/c3p0.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier 'hocon:/reference,/application,/c3p0,/' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.resourcepool.BasicResourcePool]com.mchange.v2.resourcepool.BasicResourcePool@530d1e config: [start -> 10; min -> 3; max -> 50; inc -> 3; num_acq_attempts -> 30; acq_attempt_delay -> 1000; check_idle_resources_delay -> 0; max_resource_age -> 0; max_idle_time -> 0; excess_max_idle_time -> 0; destroy_unreturned_resc_time -> 0; expiration_enforcement_delay -> 0; break_on_acquisition_failure -> false; debug_store_checkout_exceptions -> false; force_synchronous_checkins -> false]
+  [DEBUG][com.mchange.v2.c3p0.impl.C3P0PooledConnectionPoolManager]Created new pool for auth, username (masked): 'Fi******'.
+  [DEBUG][com.mchange.v2.resourcepool.BasicResourcePool]acquire test -- pool size: 0; target_pool_size: 10; desired target? 1
+  [DEBUG][com.mchange.v2.resourcepool.BasicResourcePool]awaitAvailable(): [unknown]
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1f17eb4]
+  [DEBUG][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@11f29fa [wrapping: com.mysql.jdbc.JDBC4Connection@eab9a1]] will be managed by Spring
+  [DEBUG][com.oracle.five.cloud_disk.mapper.UserMapper.adduser]==>  Preparing: insert into users (password,nickname,head_img) value (?,?,?); 
+  [DEBUG][com.oracle.five.cloud_disk.mapper.UserMapper.adduser]==> Parameters: kylinsdf(String), 123(String), default.jpg(String)
+  [DEBUG][com.mchange.v2.c3p0.impl.NewPooledConnection]com.mchange.v2.c3p0.impl.NewPooledConnection@1d0d946 handling a throwable.
+  com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'CLOUD_DISK.users' doesn't exist
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2501)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1858)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1197)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.execute(NewProxyPreparedStatement.java:67)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy24.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:434)
+	at com.sun.proxy.$Proxy19.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:279)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:57)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy20.adduser(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:317)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:98)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:262)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:207)
+	at com.sun.proxy.$Proxy22.adduser(Unknown Source)
+	at com.oracle.five.clooud_disk.test.TestCenter.test(TestCenter.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+[DEBUG][com.mchange.v2.sql.SqlUtils]Attempted to convert SQLException to SQLException. Leaving it alone. [SQLState: 42S02; errorCode: 1146]
+  com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'CLOUD_DISK.users' doesn't exist
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2501)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1858)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1197)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.execute(NewProxyPreparedStatement.java:67)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy24.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:434)
+	at com.sun.proxy.$Proxy19.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:279)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:57)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy20.adduser(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:317)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:98)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:262)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:207)
+	at com.sun.proxy.$Proxy22.adduser(Unknown Source)
+	at com.oracle.five.clooud_disk.test.TestCenter.test(TestCenter.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+[DEBUG][com.mchange.v2.c3p0.impl.DefaultConnectionTester]Testing a Connection in response to an Exception:
+  com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'CLOUD_DISK.users' doesn't exist
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2501)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1858)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1197)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.execute(NewProxyPreparedStatement.java:67)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy24.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:434)
+	at com.sun.proxy.$Proxy19.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:279)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:57)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy20.adduser(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:317)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:98)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:262)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:95)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:207)
+	at com.sun.proxy.$Proxy22.adduser(Unknown Source)
+	at com.oracle.five.clooud_disk.test.TestCenter.test(TestCenter.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+[DEBUG][org.mybatis.spring.SqlSessionUtils]Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1f17eb4]
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1f17eb4]
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1f17eb4]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\mapper\ChatRecordMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\mapper\CloudFileMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\mapper\DialogueMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\mapper\RelationshipMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\mapper\ShareMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\mapper\UserMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'chatRecordMapper' and 'com.oracle.five.cloud_disk.mapper.ChatRecordMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'chatRecordMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'cloudFileMapper' and 'com.oracle.five.cloud_disk.mapper.CloudFileMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'cloudFileMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'dialogueMapper' and 'com.oracle.five.cloud_disk.mapper.DialogueMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'dialogueMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'relationshipMapper' and 'com.oracle.five.cloud_disk.mapper.RelationshipMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'relationshipMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'shareMapper' and 'com.oracle.five.cloud_disk.mapper.ShareMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'shareMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'userMapper' and 'com.oracle.five.cloud_disk.mapper.UserMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'userMapper'.
+  [INFO][com.mchange.v2.log.MLog]MLog clients using slf4j logging.
+  [DEBUG][com.mchange.v2.log.MLog]Reading VM config for path list /com/mchange/v2/log/default-mchange-log.properties, /mchange-commons.properties, /c3p0.properties, hocon:/reference,/application,/c3p0,/, /mchange-log.properties, /
+  [DEBUG][com.mchange.v2.log.MLog]The configuration file for resource identifier '/mchange-commons.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.log.MLog]The configuration file for resource identifier '/c3p0.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.log.MLog]The configuration file for resource identifier 'hocon:/reference,/application,/c3p0,/' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.log.MLog]The configuration file for resource identifier '/mchange-log.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/mchange-commons.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/mchange-log.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier 'hocon:/reference,/application,/c3p0,/' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/c3p0.properties' could not be found. Skipping.
+  [INFO][com.mchange.v2.c3p0.C3P0Registry]Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+  [DEBUG][com.mchange.v2.c3p0.management.DynamicPooledDataSourceManagerMBean]MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1bqsyzc9p1prw32w1817u4m|b3b079,name=1bqsyzc9p1prw32w1817u4m|b3b079 registered.
+  [DEBUG][com.mchange.v2.c3p0.management.DynamicPooledDataSourceManagerMBean]MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1bqsyzc9p1prw32w1817u4m|b3b079,name=1bqsyzc9p1prw32w1817u4m|b3b079 unregistered, in order to be reregistered after update.
+  [DEBUG][com.mchange.v2.c3p0.management.DynamicPooledDataSourceManagerMBean]MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1bqsyzc9p1prw32w1817u4m|b3b079,name=1bqsyzc9p1prw32w1817u4m|b3b079 registered.
+  [DEBUG][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed configuration file: 'class path resource [mybatis.xml]'
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed mapper file: 'file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\wrapper\ChatRecordMapper.xml]'
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed mapper file: 'file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\wrapper\CloudFileMapper.xml]'
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed mapper file: 'file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\wrapper\DialogueMapper.xml]'
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed mapper file: 'file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\wrapper\RelationshipMapper.xml]'
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed mapper file: 'file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\wrapper\ShareMapper.xml]'
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed mapper file: 'file [D:\oracleDemo\cloud_disk\target\classes\com\oracle\five\cloud_disk\wrapper\UserMapper.xml]'
+  [INFO][com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource]Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1bqsyzc9p1prw32w1817u4m|b3b079, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1bqsyzc9p1prw32w1817u4m|b3b079, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://120.24.244.103:3306/CLOUD_DISK, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 50, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/mchange-commons.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/mchange-log.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/c3p0.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier 'hocon:/reference,/application,/c3p0,/' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.resourcepool.BasicResourcePool]com.mchange.v2.resourcepool.BasicResourcePool@a12036 config: [start -> 10; min -> 3; max -> 50; inc -> 3; num_acq_attempts -> 30; acq_attempt_delay -> 1000; check_idle_resources_delay -> 0; max_resource_age -> 0; max_idle_time -> 0; excess_max_idle_time -> 0; destroy_unreturned_resc_time -> 0; expiration_enforcement_delay -> 0; break_on_acquisition_failure -> false; debug_store_checkout_exceptions -> false; force_synchronous_checkins -> false]
+  [DEBUG][com.mchange.v2.c3p0.impl.C3P0PooledConnectionPoolManager]Created new pool for auth, username (masked): 'Fi******'.
+  [DEBUG][com.mchange.v2.resourcepool.BasicResourcePool]acquire test -- pool size: 0; target_pool_size: 10; desired target? 1
+  [DEBUG][com.mchange.v2.resourcepool.BasicResourcePool]awaitAvailable(): [unknown]
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@153b9e]
+  [DEBUG][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@1342f40 [wrapping: com.mysql.jdbc.JDBC4Connection@4ca3f6]] will be managed by Spring
+  [DEBUG][com.oracle.five.cloud_disk.mapper.UserMapper.adduser]==>  Preparing: insert into USERS (password,nickname,head_img) value (?,?,?); 
+  [DEBUG][com.oracle.five.cloud_disk.mapper.UserMapper.adduser]==> Parameters: kylinsdf(String), 123(String), default.jpg(String)
+  [DEBUG][com.oracle.five.cloud_disk.mapper.UserMapper.adduser]<==    Updates: 1
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@153b9e]
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@153b9e]
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@153b9e]
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@153b9e]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\oracle\workspace\cloud_disk\target\classes\com\oracle\five\cloud_disk\mapper\ChatRecordMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\oracle\workspace\cloud_disk\target\classes\com\oracle\five\cloud_disk\mapper\CloudFileMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\oracle\workspace\cloud_disk\target\classes\com\oracle\five\cloud_disk\mapper\DialogueMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\oracle\workspace\cloud_disk\target\classes\com\oracle\five\cloud_disk\mapper\MyShareMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\oracle\workspace\cloud_disk\target\classes\com\oracle\five\cloud_disk\mapper\RelationshipMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\oracle\workspace\cloud_disk\target\classes\com\oracle\five\cloud_disk\mapper\ShareMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\oracle\workspace\cloud_disk\target\classes\com\oracle\five\cloud_disk\mapper\UserMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'chatRecordMapper' and 'com.oracle.five.cloud_disk.mapper.ChatRecordMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'chatRecordMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'cloudFileMapper' and 'com.oracle.five.cloud_disk.mapper.CloudFileMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'cloudFileMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'dialogueMapper' and 'com.oracle.five.cloud_disk.mapper.DialogueMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'dialogueMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'myShareMapper' and 'com.oracle.five.cloud_disk.mapper.MyShareMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'myShareMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'relationshipMapper' and 'com.oracle.five.cloud_disk.mapper.RelationshipMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'relationshipMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'shareMapper' and 'com.oracle.five.cloud_disk.mapper.ShareMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'shareMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'userMapper' and 'com.oracle.five.cloud_disk.mapper.UserMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'userMapper'.
+  [DEBUG][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+  [INFO][com.mchange.v2.log.MLog]MLog clients using slf4j logging.
+  [DEBUG][com.mchange.v2.log.MLog]Reading VM config for path list /com/mchange/v2/log/default-mchange-log.properties, /mchange-commons.properties, /c3p0.properties, hocon:/reference,/application,/c3p0,/, /mchange-log.properties, /
+  [DEBUG][com.mchange.v2.log.MLog]The configuration file for resource identifier '/mchange-commons.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.log.MLog]The configuration file for resource identifier '/c3p0.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.log.MLog]The configuration file for resource identifier 'hocon:/reference,/application,/c3p0,/' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.log.MLog]The configuration file for resource identifier '/mchange-log.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/mchange-commons.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/mchange-log.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier 'hocon:/reference,/application,/c3p0,/' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/c3p0.properties' could not be found. Skipping.
+  [INFO][com.mchange.v2.c3p0.C3P0Registry]Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+  [DEBUG][com.mchange.v2.c3p0.management.DynamicPooledDataSourceManagerMBean]MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1bqsyz69p1rh57c8633m5z|1bd702e,name=1bqsyz69p1rh57c8633m5z|1bd702e registered.
+  [DEBUG][com.mchange.v2.c3p0.management.DynamicPooledDataSourceManagerMBean]MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1bqsyz69p1rh57c8633m5z|1bd702e,name=1bqsyz69p1rh57c8633m5z|1bd702e unregistered, in order to be reregistered after update.
+  [DEBUG][com.mchange.v2.c3p0.management.DynamicPooledDataSourceManagerMBean]MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1bqsyz69p1rh57c8633m5z|1bd702e,name=1bqsyz69p1rh57c8633m5z|1bd702e registered.
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed configuration file: 'class path resource [mybatis.xml]'
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed mapper file: 'file [D:\oracle\workspace\cloud_disk\target\classes\com\oracle\five\cloud_disk\mapper\ChatRecordMapper.xml]'
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed mapper file: 'file [D:\oracle\workspace\cloud_disk\target\classes\com\oracle\five\cloud_disk\mapper\CloudFileMapper.xml]'
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed mapper file: 'file [D:\oracle\workspace\cloud_disk\target\classes\com\oracle\five\cloud_disk\mapper\DialogueMapper.xml]'
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed mapper file: 'file [D:\oracle\workspace\cloud_disk\target\classes\com\oracle\five\cloud_disk\mapper\MyShareMapper.xml]'
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed mapper file: 'file [D:\oracle\workspace\cloud_disk\target\classes\com\oracle\five\cloud_disk\mapper\RelationshipMapper.xml]'
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed mapper file: 'file [D:\oracle\workspace\cloud_disk\target\classes\com\oracle\five\cloud_disk\mapper\ShareMapper.xml]'
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed mapper file: 'file [D:\oracle\workspace\cloud_disk\target\classes\com\oracle\five\cloud_disk\mapper\UserMapper.xml]'
+  [INFO][com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource]Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1bqsyz69p1rh57c8633m5z|1bd702e, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1bqsyz69p1rh57c8633m5z|1bd702e, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://120.24.244.103:3306/CLOUD_DISK, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 50, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/mchange-commons.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/mchange-log.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/c3p0.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier 'hocon:/reference,/application,/c3p0,/' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.resourcepool.BasicResourcePool]com.mchange.v2.resourcepool.BasicResourcePool@51aec2 config: [start -> 10; min -> 3; max -> 50; inc -> 3; num_acq_attempts -> 30; acq_attempt_delay -> 1000; check_idle_resources_delay -> 0; max_resource_age -> 0; max_idle_time -> 0; excess_max_idle_time -> 0; destroy_unreturned_resc_time -> 0; expiration_enforcement_delay -> 0; break_on_acquisition_failure -> false; debug_store_checkout_exceptions -> false; force_synchronous_checkins -> false]
+  [DEBUG][com.mchange.v2.c3p0.impl.C3P0PooledConnectionPoolManager]Created new pool for auth, username (masked): 'Fi******'.
+  [DEBUG][com.mchange.v2.resourcepool.BasicResourcePool]acquire test -- pool size: 0; target_pool_size: 10; desired target? 1
+  [DEBUG][com.mchange.v2.resourcepool.BasicResourcePool]awaitAvailable(): [unknown]
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1aee4b5]
+  [DEBUG][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@20b973 [wrapping: com.mysql.jdbc.JDBC4Connection@6f4093]] will be managed by Spring
+  [DEBUG][com.oracle.five.cloud_disk.mapper.RelationshipMapper.getFriendList]==>  Preparing: select r.RELATIONSHIP_ID as RELATIONSHIP_ID,r.HOST_USER_ID as HOST_USER_ID,r.REMARK as REMARK,r.ADD_TIME as ADD_TIME , u.USER_ID as FRIEND_USER_ID , u.NICKNAME AS FRIEND_NICKNAME , u.HEAD_IMG AS FRIEND_HEAD_IMG , u.FILE_ID AS FRIEND_FILE_ID from RELATIONSHIP r left join USERS u on r.FRIEND_USER_ID=u.USER_ID WHERE HOST_USER_ID=? 
+  [DEBUG][com.oracle.five.cloud_disk.mapper.RelationshipMapper.getFriendList]==> Parameters: 2(Integer)
+  [DEBUG][com.oracle.five.cloud_disk.mapper.RelationshipMapper.getFriendList]<==      Total: 5
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1aee4b5]
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1aee4b5]
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1aee4b5]
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1aee4b5]
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1caf2b5]
+  [DEBUG][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@11c8eb4 [wrapping: com.mysql.jdbc.JDBC4Connection@1dcdd6e]] will be managed by Spring
+  [DEBUG][com.oracle.five.cloud_disk.mapper.UserMapper.adduser]==>  Preparing: insert into USERS (PASSWORD,NICKNAME,HEAD_IMG,FILE_ID) values (?,?,?,?); 
+  [DEBUG][com.oracle.five.cloud_disk.mapper.UserMapper.adduser]==> Parameters: 123(String), wwee(String), default.jpg(String), null
+  [DEBUG][com.oracle.five.cloud_disk.mapper.UserMapper.adduser]<==    Updates: 1
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1caf2b5]
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1caf2b5]
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1caf2b5]
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1caf2b5]
+  

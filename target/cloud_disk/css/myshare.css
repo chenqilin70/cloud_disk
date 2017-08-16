@@ -1,0 +1,28 @@
+/* .down{
+	padding-top: 24px;
+	width:100%;
+}*/
+.fufA{
+    height: 36px;
+    line-height: 36px;
+    cursor: pointer;
+    _overflow: hidden;
+}
+.dowm .fufA{
+	float:left;
+} 
+
+body #page-wrapper {
+    color: rgb(102, 102, 102);
+    font: 12px/1.5 "Microsoft YaHei", tahoma, arial, 宋体;
+} 
+td{
+	padding: 0;
+	line-height: 36px;
+}
+tr{
+	height:36px;
+}
+.down div:hover{
+	background-color: #fff;
+}

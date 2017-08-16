@@ -1,0 +1,54 @@
+/*无删除文件时的css设置*/
+.empty {
+	position:absolute;
+	width: 370px;
+   	height:264px;
+	top: 12%;
+    left:30%;
+}
+.empty img{
+	 width: 135px;
+   	 height: 150px;
+   	 margin-left:30%; 
+   	 background-position:center;
+	 background-repeat:no-repeat;
+}
+
+.empty-word {
+    color: #424e67;
+    text-align: center;
+    font-size: 14px;
+}
+.empty .text {
+    font-size: 14px;
+    line-height: 25px;
+    margin-top: 30px;
+    color: #8e99b3;
+}
+
+/*如果有删除文件*/
+
+.fufA{
+    height: 36px;
+    line-height: 36px;
+    cursor: pointer;
+    _overflow: hidden;
+}
+.dowm .fufA{
+	float:left;
+} 
+
+body #page-wrapper {
+    color: rgb(102, 102, 102);
+    font: 12px/1.5 "Microsoft YaHei", tahoma, arial, 宋体;
+} 
+td{
+	padding: 0;
+	line-height: 36px;
+}
+tr{
+	height:36px;
+}
+.down div:hover{
+	background-color: #fff;
+}

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.oracle.five.cloud_disk.mapper.UserMapper">
+
+  <resultMap id="BaseResultMap" type="com.oracle.five.cloud_disk.beans.User">
+    <id column="USER_ID" jdbcType="INTEGER" property="userId" />
+    <result column="PASSWORD" jdbcType="VARCHAR" property="password" />
+    <result column="NICKNAME" jdbcType="VARCHAR" property="nickname" />
+    <result column="HEAD_IMG" jdbcType="VARCHAR" property="headImg" />
+    <result column="CAPACITY" jdbcType="INTEGER" property="capacity" />
+    <result column="FILE_ID" jdbcType="INTEGER" property="rootFile.fileId" />
+  </resultMap>
+  <select id="login" parameterType="com.oracle.five.cloud_disk.beans.User" resultType="java.lang.Integer">
+  select count(*) from USERS where nickname=#{nickname} and password=#{password}
+  </select>
+  <select id="selectuserbyname" parameterType="java.lang.String" resultType="java.lang.Integer">
+  select count(*) from USERS where nickname=#{nickname};
+  </select>
+  <select id="selectuseridbyname" parameterType="java.lang.String" resultType="java.lang.Integer">
+  select user_Id from USERS where nickname=#{nickname};
+  </select>
+  <select id="selectuserimgbyname" parameterType="java.lang.String" resultType="java.lang.String">
+  select head_img from USERS where nickname=#{nickname};
+  </select>
+   <select id="selectfileidbyname"  parameterType="java.lang.String" resultType="java.lang.Integer">
+  select file_id from USERS where nickname=#{nickname};
+  </select>
+   <select id="selectusercapacitybyname" parameterType="java.lang.String" resultType="java.lang.Integer">
+  select capacity from USERS where nickname=#{nickname};
+  </select>
+   <select id="selectuserfilebyname" parameterType="java.lang.String" resultType="com.oracle.five.cloud_disk.beans.CloudFile">
+  select file_id from USERS where nickname=#{nickname};
+  </select>
+  <select id="fileid" resultType="java.lang.Integer">
+  select max(FILE_ID) FROM FILE;
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from USERS
+    where USER_ID = #{userId,jdbcType=INTEGER}
+  </delete>
+  <insert id="adduser" parameterType="com.oracle.five.cloud_disk.beans.User"  keyProperty="userId" useGeneratedKeys="true">
+    
+    insert into USERS (PASSWORD,NICKNAME,HEAD_IMG,FILE_ID) values (#{password},#{nickname},#{headImg},#{rootFile.fileId});
+  </insert>
+  <insert id="insertfile"  keyProperty="fileId" useGeneratedKeys="true">
+ insert into FILE (FATHER_FILE_ID,FILE_NAME,REAL_PATH,IS_DELETE,SCAN_COUNT,SAVE_COUNT,DOWNLOAD_COUNT,TYPE) values (null,null,null,null,null,null,null,0)
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.oracle.five.cloud_disk.beans.User">
+    
+    update USERS
+    set PASSWORD = #{password,jdbcType=VARCHAR},
+      NICKNAME = #{nickname,jdbcType=VARCHAR},
+      HEAD_IMG = #{headImg,jdbcType=VARCHAR},
+      CAPACITY = #{capacity,jdbcType=INTEGER},
+      FILE_ID = #{rootFile.fileId,jdbcType=INTEGER}
+    where USER_ID = #{userId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer"
+   resultMap="BaseResultMap">
+    select USER_ID, NICKNAME, HEAD_IMG, CAPACITY, FILE_ID
+    from USERS
+    where USER_ID = #{userId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    
+    select USER_ID, PASSWORD, NICKNAME, HEAD_IMG, CAPACITY, FILE_ID
+    from USERS
+  </select>
+  <select id="getUserByNickname" resultMap="BaseResultMap" parameterType="java.lang.String">
+  	select u.USER_ID as USER_ID,u.NICKNAME as NICKNAME,u.HEAD_IMG as HEAD_IMG
+  	 from USERS u
+  	 where binary  NICKNAME=#{nickname}
+  	 limit 1
+  </select>
+</mapper>

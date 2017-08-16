@@ -1,0 +1,48 @@
+/*判断是否为最外面的元素被移出了*/
+function isWrapElement(e, thisElement) {
+    $relatedElement = e.relatedTarget;
+    if ($relatedElement == null) {
+        return true;
+    }
+    var flag = thisElement.compareDocumentPosition($relatedElement);
+    return !(flag == 0 || flag == 20);
+}
+/*注册鼠标移入移出样式*/
+function registerOverAndOut(selector,over,out){
+	var overFun=null,outFun=null;
+	if(over!=null){
+		if(typeof over=="object"){
+			overFun=function(e){
+				if(isWrapElement(e,this)){
+					$(this).css(over);
+				}
+			};
+		}else if(typeof over=="function"){
+			overFun=over;
+		};
+	}
+	if(out!=null){
+		if(typeof out=="object"){
+			outFun=function(e){
+				if(isWrapElement(e,this)){
+					$(this).css(out);
+				}
+			};
+		}else if(typeof out=="function"){
+			outFun=out;
+		}
+	}
+	if(overFun!=null){
+		$(selector).mouseover(overFun);
+	}
+	if(outFun!=null){
+		$(selector).mouseout(outFun);
+	}
+}
+registerOverAndOut(".custombtn", {
+	"backgroundColor":"#F35341",
+	"borderColor":"#F35341"
+}, {
+	"backgroundColor":"#F36A5A",
+	"borderColor":"#F36A5A"
+});

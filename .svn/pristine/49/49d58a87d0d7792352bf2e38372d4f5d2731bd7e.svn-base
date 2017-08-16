@@ -1,0 +1,68 @@
+package com.oracle.five.cloud_disk.biz;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.oracle.five.cloud_disk.beans.CloudFile;
+import com.oracle.five.cloud_disk.beans.Share;
+import com.oracle.five.cloud_disk.mapper.CloudFileMapper;
+import com.oracle.five.cloud_disk.mapper.ShareMapper;
+
+@Service
+public class SharepageService {
+	@Autowired
+	private CloudFileMapper filemapper;
+	private ShareMapper sharemapper;
+	private Share share;
+	
+	//创建公共链接
+	public void createsharelink(String type,String timerange,String fileid,String link){
+		String l=""+fileid+"/"+link;
+		share=new Share();
+		share.setShareType(Integer.valueOf(type));
+		share.setSharelink(l);
+		share.setShareTime(new Date());
+		share.setShareId(0);
+		share.setTimerange(Integer.valueOf(timerange));
+		sharemapper.insert(share);
+	}
+	
+	//创建私密链接
+	public void createsharelink(String type,String passwd,String timerange,String fileid,String link){
+		String l=""+fileid+"/"+link;
+		share=new Share();
+		share.setPassword(passwd);
+		share.setShareType(Integer.valueOf(type));
+		share.setSharelink(l);
+		share.setShareTime(new Date());
+		share.setShareId(0);
+		share.setTimerange(Integer.valueOf(timerange));
+		sharemapper.insert(share);
+	}
+	
+	
+	//打开链接的服务判断层
+	public CloudFile opensharelinkservice(String fileid,String posetfix){
+		String l=""+fileid+"/"+posetfix;
+		Share sh=sharemapper.selectsharelinkbylink(l);
+		System.out.println(sh.toString());
+		return null;
+	}
+	//根据id取得当前文件
+	public CloudFile getpreviousfoldservice(String fileid){
+		CloudFile f=filemapper.selectByPrimaryKey(Integer.valueOf(fileid));
+		return f;
+	}
+	
+	//根据文件id取得其子文件
+	public List<CloudFile> getallsonfileservice(String fileid){
+		List<CloudFile> lsf=filemapper.selectFile(Integer.valueOf(fileid));
+		return lsf;
+	}
+}

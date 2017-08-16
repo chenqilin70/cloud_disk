@@ -1,0 +1,166 @@
+@CHARSET "UTF-8";
+        body, div, span, h2 {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: url("imgs/bg.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+        .box {
+            width: 1000px;
+            height: 35px;
+            margin: 20px auto;
+            border-radius: 10px;
+            background: #EDEDED;
+            color: #ccc;
+            font-size: 12px;
+            font-weight: bolder;
+        }
+
+        /****ä½¿ç¨å¤é¾æ ·å¼éç½®å³é®èå*****/
+
+        .kinerMenuBox {
+	
+            width: 120px;
+
+            background: #FEFEFE;
+
+            border: solid 1px #c0c0c0;
+
+            cursor: pointer;
+
+            border-radius: 10px;
+
+            overflow: hidden;
+
+            font-size: 12px;
+
+            position: absolute;
+
+        }
+
+
+
+        .kinerMenuBox .kinerMenuTitle {
+
+            background: #DDDDDD;
+
+            padding: 10px 5px;
+
+            border-bottom: inset #444444 1px;
+
+            cursor: default
+
+        }
+
+
+
+        .kinerMenuBox .kinerMenuTitle .kinerMenuTitleIcon {
+
+            width: 15px;
+
+            height: 15px
+
+        }
+
+
+
+        .kinerMenuBox .kinerMenuTitle .kinerMenuTitleCon {
+
+            height: 15px;
+
+            line-height: 15px;
+
+            padding-left: 10px;
+
+
+            color: #444444;
+
+            font-size: 12px;
+
+            display: inline-block;
+
+            vertical-align: top
+
+        }
+
+
+
+        .kinerMenuBox .kinerMenuItem {
+
+            background: #FFF;
+
+            padding: 5px 5px;
+
+        }
+
+
+
+        .kinerMenuBox .kinerMenuItem:hover {
+
+            background: #CCC;
+
+        }
+
+
+
+        .kinerMenuBox .kinerMenuItem .kinerMenuItemIcon {
+
+            display: inline-block;
+
+            width: 15px;
+
+            height: 15px
+
+        }
+
+
+
+        .kinerMenuBox .kinerMenuItem .kinerMenuItemCon {
+
+            height: 15px;
+
+            line-height: 15px;
+
+            position: relative;
+
+            color: #444444;
+
+            font-size: 12px;
+
+            display: inline-block;
+
+            vertical-align: top
+
+        }
+
+
+
+        .kinerMenuBox .kinerSeparator {
+
+            width: 100%;
+
+            height: 1px;
+
+            border-bottom: dashed 1px #444444;
+
+            /*background: #444444*/
+
+            border-left: none;
+
+            border-right: none
+
+        }
+
+
+        .kinerMenuBox .kinerKeyMap {
+            margin-right: 5px;
+            right: 10px;
+            position: absolute;
+            color: #444444;
+            height: 30px;
+            line-height: 30px;
+            display: inline-block;
+        }

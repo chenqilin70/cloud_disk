@@ -1,0 +1,61 @@
+package com.oracle.five.cloud_disk.controller;
+
+import java.util.Map;
+import java.util.Scanner;
+
+import javax.servlet.http.HttpSession;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.SessionAttributes;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.oracle.five.cloud_disk.beans.Relationship;
+import com.oracle.five.cloud_disk.beans.User;
+import com.oracle.five.cloud_disk.biz.ShareBiz;
+@SessionAttributes("loginedUserId")
+@Controller
+public class ShareController {
+	@Autowired
+	private ObjectMapper objectMapper;
+	@Autowired
+	private ShareBiz shareBiz;
+	
+	@RequestMapping("/share")
+	public String share(ModelMap map,HttpSession session){
+		Integer loginedUserId=null;
+		if(map.get("loginedUserId")==null){
+			System.out.println("请输入您的用户id：");
+			loginedUserId=new Scanner(System.in).nextInt();
+			map.addAttribute("loginedUserId", loginedUserId);
+		}else{
+			loginedUserId=(Integer) map.get("loginedUserId");
+		}
+		map.addAttribute("relationshipList", shareBiz.getFriendList(loginedUserId));
+		return "share";
+	}
+	@RequestMapping("/searchFriend")
+	@ResponseBody
+	public User searchFriend(User user,ModelMap map){
+		User result=shareBiz.getUserByNickname(user.getNickname(),((Integer)map.get("loginedUserId")));
+		return result==null?user:result;
+	}
+	@RequestMapping("/addRelationship")
+	@ResponseBody
+	public Relationship addRelationship(Relationship relationship,ModelMap map){
+		return shareBiz.addRelationship(relationship,((Integer)map.get("loginedUserId")));
+	}
+	@RequestMapping("/addRemark")
+	@ResponseBody
+	public String addRemark(Relationship relationship){
+		return shareBiz.addRemark(relationship);
+	}
+	
+	
+	
+}

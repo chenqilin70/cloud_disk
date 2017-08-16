@@ -1,0 +1,37 @@
+.inputpassdiv{
+	position: absolute;
+	width:20%;
+	height:10%;
+	background-color:#494949;
+	margin-top: 20%;
+	margin-left: 33%;
+}
+
+.inputpassdiv .inputpassfont{
+	color: #e5e5e5;
+	font-size: 15px;
+}
+
+.inputpassdiv .inputtext{
+	width:150px;
+	height:30px;
+	margin-top: 10%;
+	margin-left: 10%;
+}
+
+.inputpassdiv .submitbut{
+	border:none;
+	width:60px;
+	height:30px;
+	margin-top: 26%;
+	margin-left: 90%;
+	background-color:#494949;
+	color: #e5e5e5;
+}
+
+.inputpassdiv .errorfont{
+	margin-top:100%;
+	color: #ff4444;
+	font-size: 15px;
+}
+

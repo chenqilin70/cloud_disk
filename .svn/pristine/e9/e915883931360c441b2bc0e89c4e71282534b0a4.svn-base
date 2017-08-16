@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+    <classPathEntry
+               location="D:/WorkFile/program/OpenSource/mysql-connector-java-5.1.18/mysql-connector-java-5.1.18-bin.jar"/>
+    <context id="DB2Tables" targetRuntime="MyBatis3Simple">
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://120.24.244.103:3306/CLOUD_DISK"
+                        userId="FiveUser"
+                        password="123456">
+        </jdbcConnection>
+
+        <javaTypeResolver >
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+
+        <javaModelGenerator targetPackage="com.oracle.five.cloud_disk.beans"
+                            targetProject="./src/main/java">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="com.oracle.five.cloud_disk.wrapper"
+                         targetProject="./src/main/resources">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.oracle.five.cloud_disk.wrapper"
+                             targetProject="./src/main/java">
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+
+        <table  tableName="CHAT_RECORD" domainObjectName="ChatRecord" ></table>
+        <table  tableName="DIALOGUE" domainObjectName="Dialogue" ></table>
+        <table  tableName="FILE" domainObjectName="CloudFile" ></table>
+        <table  tableName="RELATIONSHIP" domainObjectName="Relationship" ></table>
+        <table  tableName="SHARE" domainObjectName="Share" ></table>
+        <table  tableName="USERS" domainObjectName="User" ></table>
+
+    </context>
+</generatorConfiguration>

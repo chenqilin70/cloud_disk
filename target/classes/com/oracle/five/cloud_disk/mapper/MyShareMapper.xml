@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.oracle.five.cloud_disk.mapper.MyShareMapper">
+  <resultMap id="BaseResultMap" type="com.oracle.five.cloud_disk.beans.MyShare">
+    
+    <id column="FILE_ID" jdbcType="INTEGER" property="fileId" />
+    <result column="SHARE_ID" jdbcType="INTEGER" property="shareId" />
+    <result column="FILE_NAME" jdbcType="VARCHAR" property="fileName" />
+    <result column="SCAN_COUNT" jdbcType="INTEGER" property="scanCount" />
+    <result column="SAVE_COUNT" jdbcType="INTEGER" property="saveCount" />
+    <result column="DOWNLOAD_COUNT" jdbcType="INTEGER" property="downloadCount" />
+    <result column="SHARE_TIME" jdbcType="TIMESTAMP" property="shareTime" />
+    <result column="TIMERANGE" jdbcType="INTEGER" property="timeRange" />
+  </resultMap>
+  
+  <select id="selectShareFiles" resultMap="BaseResultMap">
+   
+ select f.FILE_NAME,f.SCAN_COUNT,f.SAVE_COUNT,f.DOWNLOAD_COUNT,s.SHARE_TIME,s.TIMERANGE 
+FROM FILE f LEFT JOIN`SHARE_FILE` sf ON f.FILE_ID=sf.FILE_ID
+LEFT JOIN `SHARE` s ON s.SHARE_ID=sf.SHARE_ID 
+  </select>
+  
+  
+</mapper>

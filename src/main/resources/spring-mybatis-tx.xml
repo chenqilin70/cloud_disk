@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <bean  id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="user" value="${user}"></property>
+        <property name="password" value="${pwd}"></property>
+        <property name="jdbcUrl" value="${jdbcUrl}"></property>
+        <property name="driverClass" value="${driverClass}"></property>
+        <property name="initialPoolSize" value="${initPoolSize}"></property>
+        <property name="maxPoolSize" value="${maxPoolSize}"></property>
+    </bean>
+    <bean class="org.mybatis.spring.SqlSessionFactoryBean" id="sessionFactory">
+        <property name="dataSource" ref="dataSource"></property>
+        <!--指定全局配置文件的位置-->
+        <property name="configLocation" value="classpath:mybatis.xml"></property>
+        <!--指定mapper文件的位置-->
+        <property name="mapperLocations" value="classpath:com/oracle/five/cloud_disk/mapper/*.xml"></property>
+    </bean>
+    <!--spring 事务管理器-->
+    <bean class="org.springframework.jdbc.datasource.DataSourceTransactionManager" id="transactionManager">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+
+    <!-- 配置事务属性 -->
+    <tx:advice id="txadvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="*" propagation="REQUIRED"/>
+        </tx:attributes>
+    </tx:advice>
+    <!-- 配置事务所在切面 -->
+    <aop:config>
+        <aop:pointcut
+                expression="execution(* com.oracle.five.cloud_disk.biz.*.*(..))
+             || execution(* com.oracle.five.cloud_disk.mapper.*.*(..))"
+                id="pointcut"/>
+        <aop:advisor advice-ref="txadvice" pointcut-ref="pointcut"/>
+    </aop:config>
+    <mybatis-spring:scan  base-package="com.oracle.five.cloud_disk.mapper"></mybatis-spring:scan>
+</beans>

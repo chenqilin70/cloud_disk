@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.oracle.five.cloud_disk.mapper.UserMapper">
+
+  <resultMap id="BaseResultMap" type="com.oracle.five.cloud_disk.beans.User">
+    <id column="USER_ID" jdbcType="INTEGER" property="userId" />
+    <result column="PASSWORD" jdbcType="VARCHAR" property="password" />
+    <result column="NICKNAME" jdbcType="VARCHAR" property="nickname" />
+    <result column="HEAD_IMG" jdbcType="VARCHAR" property="headImg" />
+    <result column="CAPACITY" jdbcType="INTEGER" property="capacity" />
+    <result column="FILE_ID" jdbcType="INTEGER" property="rootFile.fileId" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from USERS
+    where USER_ID = #{userId,jdbcType=INTEGER}
+  </delete>
+  <insert id="adduser"  parameterType="com.oracle.five.cloud_disk.beans.User" keyProperty="userId" useGeneratedKeys="true">
+    
+    insert into USERS (password,nickname,head_img) value (#{nickname},#{password},#{headImg});
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.oracle.five.cloud_disk.beans.User">
+    
+    update USERS
+    set PASSWORD = #{password,jdbcType=VARCHAR},
+      NICKNAME = #{nickname,jdbcType=VARCHAR},
+      HEAD_IMG = #{headImg,jdbcType=VARCHAR},
+      CAPACITY = #{capacity,jdbcType=INTEGER},
+      FILE_ID = #{rootFile.fileId,jdbcType=INTEGER}
+    where USER_ID = #{userId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    
+    select USER_ID, PASSWORD, NICKNAME, HEAD_IMG, CAPACITY, FILE_ID
+    from USERS
+    where USER_ID = #{userId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    
+    select USER_ID, PASSWORD, NICKNAME, HEAD_IMG, CAPACITY, FILE_ID
+    from USERS
+  </select>
+  <select id="getUserByNickname" resultMap="BaseResultMap" parameterType="java.lang.String">
+  	select u.USER_ID as USER_ID,u.NICKNAME as NICKNAME,u.HEAD_IMG as HEAD_IMG
+  	 from USERS u
+  	 where binary  NICKNAME=#{nickname}
+  	 limit 1
+  </select>
+  
+</mapper>

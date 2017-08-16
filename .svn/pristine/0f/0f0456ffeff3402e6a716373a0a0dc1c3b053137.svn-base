@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<table class="friendMainTable" border="0" cellspacing="0" cellspadding="0">
+	<tbody>
+		<tr><td></td></tr>
+		<tr>
+			<td  class="friendMainCenterTd">
+				<div class="friendMainCenterDiv" align="center">
+					<img src="imgs/user_head/${relate.friendUser.headImg }" class="friendMainHead"/>
+					<h2>KylinChen</h2>
+					<hr/>
+					<div class="friendAttr">备<span class="palceholder">占位</span>注：${relate.remark }</div>
+					<div class="friendAttr">昵<span  class="palceholder">占位</span>称：${relate.friendUser.nickname }</div>
+					<div class="friendAttr">百度账号：${relate.friendUser.nickname }</div>
+					<button type="button" class="friendMainBtn custombtn" relationshipid="${relate.relationshipId }">分享文件</button>
+					<button type="button" class="btn btn-default friendMainBtn" relationshipid="${relate.relationshipId }">删除好友</button>
+					<button type="button" class="btn btn-default friendMainBtn" relationshipid="${relate.relationshipId }">设为黑名单</button>
+				</div>
+			</td>
+		</tr>
+		<tr><td></td></tr>
+	</tbody>
+</table>
+<script type="text/javascript" src="<%=request.getContextPath()%>/js/friend_main.js"></script>
